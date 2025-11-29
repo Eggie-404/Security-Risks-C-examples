@@ -1,0 +1,14 @@
+//---------Pre-computation Checks----------------//
+#include <limits.h> // For INT_MAX and INT_MIN
+
+int a = /* some value */;
+int x = /* some value */;
+
+// Check for positive overflow
+if (x > 0 && a > INT_MAX - x) {
+    // a + x would overflow
+}
+// Check for negative overflow (underflow)
+if (x < 0 && a < INT_MIN - x) {
+    // a + x would underflow
+}
